@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karthik Balakumaran | Portfolio</title>
+    <meta name="description" content="Executive portfolio for Karthik Balakumaran, Delivery Leader & Agentic AI Champion." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #07111f;
+        --panel: rgba(255,255,255,0.06);
+        --panel-strong: rgba(255,255,255,0.1);
+        --text: #f7f9fc;
+        --muted: #9db0c7;
+        --accent: #5eead4;
+        --accent-2: #60a5fa;
+        --border: rgba(255,255,255,0.12);
+        --shadow: 0 20px 60px rgba(0,0,0,0.24);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(96,165,250,0.22), transparent 24%),
+          radial-gradient(circle at top right, rgba(94,234,212,0.16), transparent 28%),
+          var(--bg);
+        line-height: 1.6;
+      }
+      a { color: inherit; text-decoration: none; }
+      .container { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; }
+      header {
+        padding: 2.2rem 0 2.2rem;
+      }
+      .top-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        margin-bottom: 1rem;
+      }
+      .top-nav a {
+        padding: 0.55rem 0.8rem;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.08);
+        color: var(--muted);
+        font-size: 0.9rem;
+        transition: all 0.2s ease;
+      }
+      .top-nav a:hover {
+        color: var(--text);
+        border-color: rgba(94,234,212,0.35);
+        background: rgba(94,234,212,0.12);
+      }
+      .hero {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(135deg, rgba(255,255,255,0.09), rgba(255,255,255,0.03));
+        border: 1px solid var(--border);
+        border-radius: 28px;
+        padding: 2.2rem;
+        box-shadow: var(--shadow);
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto -8% -30% auto;
+        width: 220px;
+        height: 220px;
+        background: radial-gradient(circle, rgba(96,165,250,0.25), transparent 70%);
+        pointer-events: none;
+      }
+      .passport-photo {
+        display: block;
+        width: 140px;
+        height: 140px;
+        border-radius: 12px;
+        object-fit: cover;
+        border: 2px solid rgba(255,255,255,0.12);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+        margin: 0;
+      }
+      .hero-top {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        flex-wrap: wrap;
+      }
+      .hero-content { flex: 1 1 auto; min-width: 0; }
+      .eyebrow {
+        display: inline-block;
+        font-size: 0.82rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.8rem;
+        font-weight: 700;
+      }
+      h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin: 0 0 0.7rem;
+        line-height: 1.1;
+      }
+      .subtitle {
+        font-size: clamp(1rem, 2.2vw, 1.25rem);
+        color: #d8e5f3;
+        margin: 0 0 1.2rem;
+        font-weight: 600;
+      }
+      .hero p { color: var(--muted); max-width: 780px; }
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        margin-top: 1.3rem;
+      }
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.9rem;
+        margin-top: 1.2rem;
+      }
+      .hero-stat {
+        padding: 0.95rem 1rem;
+        border-radius: 16px;
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.08);
+      }
+      .hero-stat strong {
+        display: block;
+        font-size: 1.1rem;
+        color: #fff;
+        margin-bottom: 0.2rem;
+      }
+      .hero-stat span {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      .badge {
+        padding: 0.6rem 0.9rem;
+        border-radius: 999px;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        font-size: 0.9rem;
+      }
+      main { padding: 1rem 0 4rem; }
+      section { margin-top: 1.4rem; }
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 1.25rem 1.35rem;
+        backdrop-filter: blur(10px);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+      }
+      .section-title {
+        font-size: 1.2rem;
+        margin: 0 0 0.9rem;
+        color: #eff6ff;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .section-title::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        box-shadow: 0 0 12px rgba(94,234,212,0.35);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 1.2rem;
+      }
+      .pill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+      }
+      .pill {
+        padding: 0.55rem 0.8rem;
+        border-radius: 999px;
+        background: rgba(94,234,212,0.12);
+        color: #bbf7ed;
+        border: 1px solid rgba(94,234,212,0.2);
+        font-size: 0.9rem;
+      }
+      .metric-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 0.8rem;
+      }
+      .metric-list li {
+        padding: 0.8rem 0.95rem;
+        border-radius: 14px;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.06);
+      }
+      .metric-list strong { color: #fff; }
+      .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+      }
+      .visual-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 1rem;
+      }
+      .chart-card,
+      .stack-card {
+        padding: 1rem;
+        border-radius: 16px;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.06);
+      }
+      .stack-card h3 {
+        margin: 0 0 0.8rem;
+        font-size: 1rem;
+        color: #eff6ff;
+      }
+      .progress-list {
+        display: grid;
+        gap: 0.8rem;
+      }
+      .progress-item span {
+        display: flex;
+        justify-content: space-between;
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-bottom: 0.35rem;
+      }
+      .progress-bar {
+        height: 8px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.08);
+        overflow: hidden;
+      }
+      .progress-fill {
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      }
+      .metric-card {
+        padding: 1rem;
+        border-radius: 16px;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.06);
+      }
+      .metric-card h3 {
+        margin: 0 0 0.45rem;
+        font-size: 1rem;
+        color: #eff6ff;
+      }
+      .metric-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      .capability-board {
+        display: grid;
+        gap: 0.75rem;
+      }
+      .capability-row {
+        padding: 0.9rem 1rem;
+        border-radius: 14px;
+        border: 1px solid rgba(255,255,255,0.08);
+        background: linear-gradient(90deg, rgba(94,234,212,0.08), rgba(96,165,250,0.06));
+        color: #f8fafc;
+        font-weight: 600;
+      }
+      .capability-row strong {
+        color: #5eead4;
+      }
+      .timeline {
+        display: grid;
+        gap: 1rem;
+      }
+      .timeline-item {
+        padding: 1rem 1.1rem;
+        border-radius: 16px;
+        border: 1px solid rgba(255,255,255,0.08);
+        background: rgba(255,255,255,0.04);
+      }
+      .timeline-item h3 {
+        margin: 0 0 0.25rem;
+        font-size: 1rem;
+        color: #eff6ff;
+      }
+      .timeline-item .meta {
+        color: #5eead4;
+        font-size: 0.92rem;
+        margin-bottom: 0.6rem;
+      }
+      .timeline-item ul {
+        margin: 0.35rem 0 0;
+        padding-left: 1.1rem;
+        color: var(--muted);
+      }
+      .timeline-item li + li {
+        margin-top: 0.35rem;
+      }
+      .roadmap-wrap {
+        display: grid;
+        gap: 1rem;
+      }
+      .workflow-flow {
+        display: grid;
+        gap: 0.8rem;
+      }
+      .workflow-row {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.75rem;
+        align-items: stretch;
+      }
+      .workflow-row.split {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .workflow-node {
+        border: 1px solid rgba(255,255,255,0.12);
+        background: rgba(255,255,255,0.04);
+        color: var(--text);
+        border-radius: 16px;
+        padding: 0.95rem 1rem;
+        text-align: left;
+        cursor: pointer;
+        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+      .workflow-node:hover,
+      .workflow-node.active {
+        transform: translateY(-2px);
+        border-color: #38bdf8;
+        box-shadow: 0 10px 24px rgba(56, 189, 248, 0.16);
+      }
+      .workflow-node.active {
+        background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(94,234,212,0.14));
+      }
+      .workflow-node .phase {
+        display: block;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        color: #5eead4;
+        margin-bottom: 0.3rem;
+      }
+      .workflow-node .title {
+        font-size: 0.96rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+      .workflow-node .desc {
+        font-size: 0.84rem;
+        color: var(--muted);
+      }
+      .workflow-details {
+        padding: 1rem 1.1rem;
+        border-radius: 16px;
+        border: 1px solid rgba(255,255,255,0.08);
+        background: rgba(255,255,255,0.04);
+      }
+      .workflow-details h3 {
+        margin: 0 0 0.35rem;
+        font-size: 1rem;
+        color: #eff6ff;
+      }
+      .workflow-details p {
+        margin: 0;
+        color: var(--muted);
+      }
+      .chart-wrap {
+        position: relative;
+        height: 320px;
+      }
+      .chart-wrap-large {
+        height: 360px;
+      }
+      .posts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+      }
+      .post-card {
+        padding: 1rem;
+        border-radius: 16px;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.06);
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .post-chip {
+        display: inline-flex;
+        width: fit-content;
+        padding: 0.35rem 0.6rem;
+        border-radius: 999px;
+        background: rgba(94,234,212,0.12);
+        color: #bbf7ed;
+        font-size: 0.75rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .post-card h3 {
+        margin: 0;
+        font-size: 1rem;
+        color: #eff6ff;
+      }
+      .post-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      .post-meta {
+        font-size: 0.82rem;
+        color: #5eead4;
+        margin-top: auto;
+      }
+      .chat-toggle {
+        position: fixed;
+        right: 1.2rem;
+        bottom: 1.2rem;
+        z-index: 1000;
+        border: none;
+        border-radius: 999px;
+        padding: 0.9rem 1.1rem;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        color: #04111f;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 16px 36px rgba(0,0,0,0.28);
+      }
+      .chat-panel {
+        position: fixed;
+        right: 1.2rem;
+        bottom: 5.4rem;
+        width: min(92vw, 360px);
+        max-height: 70vh;
+        display: none;
+        flex-direction: column;
+        border: 1px solid rgba(255,255,255,0.12);
+        background: rgba(7,17,31,0.96);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+        z-index: 1000;
+      }
+      .chat-panel.active {
+        display: flex;
+      }
+      .chat-header {
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        background: linear-gradient(135deg, rgba(94,234,212,0.16), rgba(96,165,250,0.12));
+      }
+      .chat-header h3 {
+        margin: 0;
+        font-size: 1rem;
+      }
+      .chat-header p {
+        margin: 0.25rem 0 0;
+        font-size: 0.84rem;
+        color: var(--muted);
+      }
+      .chat-body {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        overflow-y: auto;
+      }
+      .chat-float {
+        padding: 0.75rem 0.85rem;
+        border-radius: 14px;
+        max-width: 85%;
+        font-size: 0.92rem;
+        line-height: 1.45;
+      }
+      .chat-float.user {
+        align-self: flex-end;
+        background: rgba(94,234,212,0.18);
+        color: #ecfeff;
+      }
+      .chat-float.bot {
+        align-self: flex-start;
+        background: rgba(255,255,255,0.06);
+        color: var(--text);
+      }
+      .chat-form {
+        display: grid;
+        gap: 0.65rem;
+        padding: 0.85rem 1rem 1rem;
+        border-top: 1px solid rgba(255,255,255,0.08);
+      }
+      .chat-form input,
+      .chat-form textarea {
+        width: 100%;
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 12px;
+        background: rgba(255,255,255,0.04);
+        color: var(--text);
+        padding: 0.7rem 0.8rem;
+        font: inherit;
+      }
+      .chat-form button {
+        border: none;
+        border-radius: 999px;
+        padding: 0.72rem 0.9rem;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        color: #04111f;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .footer {
+        text-align: center;
+        color: var(--muted);
+        padding: 1rem 0 2rem;
+      }
+      @media (max-width: 800px) {
+        .grid,
+        .visual-grid { grid-template-columns: 1fr; }
+        .hero { padding: 1.5rem; }
+        .hero-stats { grid-template-columns: 1fr; }
+        .workflow-row,
+        .workflow-row.split {
+          grid-template-columns: 1fr;
+        }
+        .passport-photo {
+          display: block;
+          width: 96px;
+          height: 96px;
+          margin: 0 auto 0.75rem;
+        }
+        .hero-top { flex-direction: column; align-items: center; text-align: center; }
+        .hero-content { text-align: center; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="top-nav" aria-label="Section navigation">
+          <a href="#profile">Profile</a>
+          <a href="#metrics">Metrics</a>
+          <a href="#capabilities">Capabilities</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#connect">Connect</a>
+        </nav>
+        <div class="hero">
+          <div class="hero-top">
+            <img src="image/1782566388893.jpg" alt="Karthik Balakumaran" class="passport-photo" />
+            <div class="hero-content">
+              <div class="eyebrow">Executive Portfolio</div>
+              <h1>Karthik Balakumaran</h1>
+              <p class="subtitle">Delivery Leader & Agentic AI Champion | Enterprise Program Manager | Agile Transformation Executive</p>
+              <p>Dynamic technology executive with 18+ years of experience driving enterprise transformation, product innovation, and AI-led automation at scale.</p>
+            </div>
+          </div>
+          <div class="badges">
+            <span class="badge">LinkedIn</span>
+            <span class="badge">balas.karthik@gmail.com</span>
+            <span class="badge">18+ Years Experience</span>
+            <span class="badge">Enterprise Governance</span>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong>18+ Years</strong>
+              <span>Delivery leadership across enterprise transformation</span>
+            </div>
+            <div class="hero-stat">
+              <strong>5x</strong>
+              <span>High-impact operating models scaled across teams</span>
+            </div>
+            <div class="hero-stat">
+              <strong>100%</strong>
+              <span>Focus on measurable outcomes and governance discipline</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section id="profile" class="grid">
+          <div class="card">
+            <h2 class="section-title">Executive Profile</h2>
+            <ul class="metric-list">
+              <li><strong>Strategic Delivery:</strong> Proven success directing parallel enterprise releases, multimillion-dollar budgets, and global stakeholder alignment.</li>
+              <li><strong>AI & Automation Catalyst:</strong> Hands-on architect of workflows using UiPath, Automation Anywhere, and AI/ML frameworks.</li>
+              <li><strong>People-Centric Leadership:</strong> High-velocity Agile coaching culture with 2-4 enterprise teams coached in parallel.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h2 class="section-title">Core Focus Areas</h2>
+            <div class="pill-list">
+              <span class="pill">Enterprise Transformation</span>
+              <span class="pill">Agentic AI</span>
+              <span class="pill">Digital Automation</span>
+              <span class="pill">Agile Delivery</span>
+              <span class="pill">Program Governance</span>
+              <span class="pill">Product Innovation</span>
+              <span class="pill">Service Delivery</span>
+              <span class="pill">Resource Management</span>
+              <span class="pill">Risk Management</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card visual-grid">
+          <div class="chart-card">
+            <h2 class="section-title">Strategic Value Snapshot</h2>
+            <div class="chart-wrap chart-wrap-large">
+              <canvas id="focusChart"></canvas>
+            </div>
+          </div>
+          <div class="stack-card">
+            <h3>Transformation Maturity</h3>
+            <div class="progress-list">
+              <div class="progress-item">
+                <span>Program Lifecycle & Dependency Management <strong>90%</strong></span>
+                <div class="progress-bar"><div class="progress-fill" style="width:90%"></div></div>
+              </div>
+              <div class="progress-item">
+                <span>Business Acumen & Value Realization <strong>93%</strong></span>
+                <div class="progress-bar"><div class="progress-fill" style="width:93%"></div></div>
+              </div>
+              <div class="progress-item">
+                <span>Organizational Change Management <strong>97%</strong></span>
+                <div class="progress-bar"><div class="progress-fill" style="width:97%"></div></div>
+              </div>
+              <div class="progress-item">
+                <span>Financial & Contract Awareness <strong>92%</strong></span>
+                <div class="progress-bar"><div class="progress-fill" style="width:92%"></div></div>
+              </div>
+              <div class="progress-item">
+                <span>Customer-Centric Thinking & CX <strong>95%</strong></span>
+                <div class="progress-bar"><div class="progress-fill" style="width:95%"></div></div>
+              </div>
+              <div class="progress-item">
+                <span>Operational Readiness <strong>98%</strong></span>
+                <div class="progress-bar"><div class="progress-fill" style="width:98%"></div></div>
+              </div>
+              <div class="progress-item">
+                <span>Risk & Dependency Management <strong>98%</strong></span>
+                <div class="progress-bar"><div class="progress-fill" style="width:98%"></div></div>
+              </div>
+              <div class="progress-item">
+                <span>Data-Driven Decision Making <strong>96%</strong></span>
+                <div class="progress-bar"><div class="progress-fill" style="width:96%"></div></div>
+              </div>
+              <div class="progress-item">
+                <span>Stakeholder Alignment & Influence <strong>94%</strong></span>
+                <div class="progress-bar"><div class="progress-fill" style="width:94%"></div></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="metrics" class="card">
+          <h2 class="section-title">Executive Metrics Dashboard</h2>
+          <div class="chart-wrap">
+            <canvas id="competencyChart"></canvas>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Delivery Impact &amp; Predictability Trends</h2>
+          <p style="margin:0 0 1rem;color:var(--muted);">An executive summary of metrics achieved across major optimization and scaling transformations under management.</p>
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <h3>Agile Team Predictability</h3>
+              <p><strong>Velocity, Burn-down, Cycle Time</strong><br/>Enhanced release predictability and removed delivery bottlenecks.</p>
+            </div>
+            <div class="metric-card">
+              <h3>Operational Efficiency</h3>
+              <p><strong>Process Automation (UiPath / AA)</strong><br/>Achieved measurable business outcomes through automated workflows.</p>
+            </div>
+            <div class="metric-card">
+              <h3>Enterprise Governance</h3>
+              <p><strong>PI Planning &amp; Backlog Grooming</strong><br/>Seamless cross-functional alignment between PMO, SMEs, and Leadership.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="capabilities" class="card">
+          <h2 class="section-title">Technology Governance &amp; Capabilities</h2>
+          <div class="capability-board">
+            <div class="capability-row"><strong>AGILE TRANSFORMATION</strong> — SAFe 6 • Agile Coaching • Scrum • Kanban • RTE</div>
+            <div class="capability-row"><strong>AI &amp; AUTOMATION</strong> — Agentic AI • Generative AI • UiPath • Automation Anywhere</div>
+            <div class="capability-row"><strong>PRODUCT MANAGEMENT</strong> — Product Backlog Strategy • Design Thinking • AI Product Management</div>
+            <div class="capability-row"><strong>METRICS &amp; RISK</strong> — KPI Tracking • Risk &amp; Conflict Management • PI Planning</div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Chronological Milestones &amp; Selected Case Studies</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <h3>Program Manager | Apexon</h3>
+              <div class="meta">Jan 2023 – Present • Coimbatore, India</div>
+              <ul>
+                <li><strong>Agile Governance:</strong> Orchestrated enterprise program execution via PI Planning, managing multi-tiered agile pods simultaneously to boost sprint predictability.</li>
+                <li><strong>Intelligent Automation:</strong> Directed concurrent production rollouts across RPA (UiPath &amp; Automation Anywhere) and AI/ML project domains to drive digital cost-efficiency.</li>
+                <li><strong>Stakeholder Alliance:</strong> Synthesized organizational strategy alongside PMO and business leaders to cross-examine resource capacity, reduce risk exposure, and cement clear delivery roadmaps.</li>
+              </ul>
+            </div>
+            <div class="timeline-item">
+              <h3>Project Manager &amp; Scrum Master | Universal Technology Solutions</h3>
+              <div class="meta">Dec 2021 – Dec 2022 • Remote</div>
+              <ul>
+                <li><strong>Portfolio Oversight:</strong> Supervised multiple downstream Project Managers to monitor project interdependencies, mitigating structural risk blocks to improve velocity metrics.</li>
+                <li><strong>Agile Infrastructure:</strong> Tailored custom Agile tracking telemetry and boards, elevating delivery visibility and trust lines for global distributed cross-functional teams.</li>
+              </ul>
+            </div>
+            <div class="timeline-item">
+              <h3>Enterprise Agile Coach &amp; Project Manager | Hexaware Technologies</h3>
+              <div class="meta">Apr 2019 – Nov 2021 • Chennai, India</div>
+              <ul>
+                <li><strong>SAFe Implementation:</strong> Spearheaded scaled agile framework (SAFe) transition metrics across silos, driving a cultural shift toward transparent, high-performing, self-organizing delivery squads.</li>
+                <li><strong>Continuous Improvement:</strong> Managed full product backlogs to sustain consistent, predictable monthly enterprise sprint releases.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="roadmap" class="card">
+          <h2 class="section-title">360° Agile Delivery Roadmap</h2>
+          <p style="margin:0 0 1rem;color:var(--muted);">Click through the workflow to explore how strategic intent turns into an adaptive, predictable delivery engine.</p>
+          <div class="roadmap-wrap">
+            <div class="workflow-flow">
+              <div class="workflow-row">
+                <button class="workflow-node active" data-step="leadership">
+                  <span class="phase">Step 01</span>
+                  <div class="title">Business Leadership Needs</div>
+                  <div class="desc">Strategic priorities and risk analysis</div>
+                </button>
+                <button class="workflow-node" data-step="alignment">
+                  <span class="phase">Step 02</span>
+                  <div class="title">PMO & SME Alignments</div>
+                  <div class="desc">Backlog grooming and capacity planning</div>
+                </button>
+                <button class="workflow-node" data-step="planning">
+                  <span class="phase">Step 03</span>
+                  <div class="title">PI Planning Matrix</div>
+                  <div class="desc">Parallel stream releases with shared governance</div>
+                </button>
+              </div>
+              <div class="workflow-row split">
+                <button class="workflow-node" data-step="pod1">
+                  <span class="phase">Pod A</span>
+                  <div class="title">Agile Team Pod 1</div>
+                  <div class="desc">RPA / AI delivery stream</div>
+                </button>
+                <button class="workflow-node" data-step="pod2">
+                  <span class="phase">Pod B</span>
+                  <div class="title">Agile Team Pod 2</div>
+                  <div class="desc">Core engineering execution</div>
+                </button>
+              </div>
+              <div class="workflow-row">
+                <button class="workflow-node" data-step="engine">
+                  <span class="phase">Outcome</span>
+                  <div class="title">Predictable Delivery Engine</div>
+                  <div class="desc">Velocity, cycle time, and continuous improvement</div>
+                </button>
+              </div>
+            </div>
+            <div class="workflow-details" id="workflowDetails">
+              <h3 id="workflowTitle">Business Leadership Needs</h3>
+              <p id="workflowText">Leadership defines the strategic priorities, business objectives, and risk posture that guide the entire transformation.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <section class="container" style="margin-top:1.4rem; margin-bottom:1.2rem;">
+      <div class="card">
+        <h2 class="section-title">Recent LinkedIn Posts</h2>
+        <p style="margin:0 0 1rem;color:var(--muted);">A curated view of recent thought-leadership themes and transformation insights shared through LinkedIn.</p>
+        <div id="linkedinPosts" class="posts-grid"></div>
+      </div>
+    </section>
+
+    <section id="connect" class="container" style="margin-top:1.4rem; margin-bottom:1.5rem;">
+      <div class="card">
+        <h2 class="section-title">Connect &amp; Collaborate</h2>
+        <p style="margin:0 0 1rem;color:var(--muted);">I welcome strategic dialogues around enterprise agility models, scaling frameworks, Agentic AI orchestration, and digital transformation consulting opportunities.</p>
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <h3>Location</h3>
+            <p>Coimbatore, Tamil Nadu, India</p>
+          </div>
+          <div class="metric-card">
+            <h3>LinkedIn</h3>
+            <p><a href="https://linkedin.com/in/karthikbalakumaran/" target="_blank" rel="noreferrer">linkedin.com/in/karthikbalakumaran</a></p>
+          </div>
+          <div class="metric-card">
+            <h3>Corporate Routing</h3>
+            <p><a href="mailto:balas.karthik@gmail.com">balas.karthik@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <button class="chat-toggle" id="chatToggle" type="button">💬 Chat</button>
+    <div class="chat-panel" id="chatPanel">
+      <div class="chat-header">
+        <h3>Visitor Concierge</h3>
+        <p>Leave a note and I’ll receive it by email.</p>
+      </div>
+      <div class="chat-body" id="chatBody">
+        <div class="chat-float bot">Hello! I’m your portfolio concierge. Share a message and I’ll be notified.</div>
+      </div>
+      <form class="chat-form" id="chatForm">
+        <input id="chatName" name="name" type="text" placeholder="Your name" required />
+        <input id="chatEmail" name="email" type="email" placeholder="Your email" required />
+        <textarea id="chatMessage" name="message" rows="3" placeholder="How can I help?" required></textarea>
+        <button type="submit">Send message</button>
+      </form>
+    </div>
+
+    <div class="footer container">Built as a polished, responsive professional portfolio experience.</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const linkedinPosts = [
+        {
+          tag: 'Agility',
+          title: 'Enterprise agility is a leadership operating model',
+          excerpt: 'A practical lens on how governance, delivery cadence, and stakeholder trust create adaptive organizations.',
+          meta: 'LinkedIn • Recent insight',
+          url: 'https://www.linkedin.com/in/karthikbalakumaran/'
+        },
+        {
+          tag: 'AI',
+          title: 'Agentic AI needs orchestration, not just automation',
+          excerpt: 'Designing AI-led workflows that improve decision velocity while keeping business value measurable.',
+          meta: 'LinkedIn • Thought leadership',
+          url: 'https://www.linkedin.com/in/karthikbalakumaran/'
+        },
+        {
+          tag: 'Delivery',
+          title: 'Predictability comes from clarity, not complexity',
+          excerpt: 'How disciplined planning and dependency visibility improve delivery outcomes at scale.',
+          meta: 'LinkedIn • Transformation update',
+          url: 'https://www.linkedin.com/in/karthikbalakumaran/'
+        },
+        {
+          tag: 'Governance',
+          title: 'Scalable transformation needs cultural alignment',
+          excerpt: 'The role of PMO, leadership, and frontline teams in sustaining long-term operating model change.',
+          meta: 'LinkedIn • Leadership note',
+          url: 'https://www.linkedin.com/in/karthikbalakumaran/'
+        },
+        {
+          tag: 'Innovation',
+          title: 'Digital modernization must be value-led',
+          excerpt: 'Building programs that combine innovation, risk awareness, and customer-centric outcomes.',
+          meta: 'LinkedIn • Strategy post',
+          url: 'https://www.linkedin.com/in/karthikbalakumaran/'
+        }
+      ];
+
+      const postsContainer = document.getElementById('linkedinPosts');
+      if (postsContainer) {
+        postsContainer.innerHTML = linkedinPosts.map((post) => `
+          <a href="${post.url}" target="_blank" rel="noreferrer" class="post-card" style="color:inherit;">
+            <span class="post-chip">${post.tag}</span>
+            <h3>${post.title}</h3>
+            <p>${post.excerpt}</p>
+            <div class="post-meta">${post.meta}</div>
+          </a>
+        `).join('');
+      }
+
+      const workflowSteps = {
+        leadership: {
+          title: 'Business Leadership Needs',
+          text: 'Leadership defines the strategic priorities, business objectives, and risk posture that guide the entire transformation.'
+        },
+        alignment: {
+          title: 'PMO & SME Alignments',
+          text: 'PMO and subject matter experts align on scope, capacity, and the delivery path to reduce friction early.'
+        },
+        planning: {
+          title: 'PI Planning Matrix',
+          text: 'Shared planning creates a coordinated release structure that balances business demand and engineering capacity.'
+        },
+        pod1: {
+          title: 'Agile Team Pod 1',
+          text: 'The RPA and AI pod accelerates automation, intelligent workflows, and rapid delivery of AI-enabled outcomes.'
+        },
+        pod2: {
+          title: 'Agile Team Pod 2',
+          text: 'The core engineering pod sustains platform reliability, component delivery, and operational excellence.'
+        },
+        engine: {
+          title: 'Predictable Delivery Engine',
+          text: 'The combined flow creates a continuous feedback loop of predictability, measurable KPIs, and improvement.'
+        }
+      };
+
+      document.querySelectorAll('.workflow-node').forEach((node) => {
+        node.addEventListener('click', () => {
+          document.querySelectorAll('.workflow-node').forEach((item) => item.classList.remove('active'));
+          node.classList.add('active');
+          const step = workflowSteps[node.dataset.step];
+          document.getElementById('workflowTitle').textContent = step.title;
+          document.getElementById('workflowText').textContent = step.text;
+        });
+      });
+
+      const focusCtx = document.getElementById('focusChart').getContext('2d');
+      new Chart(focusCtx, {
+        type: 'bar',
+        data: {
+          labels: ['Agility', 'Automation', 'AI Enablement', 'Governance', 'Delivery'],
+          datasets: [{
+            label: 'Transformation Maturity',
+            data: [95, 92, 90, 97, 94],
+            backgroundColor: ['rgba(94,234,212,0.85)', 'rgba(96,165,250,0.8)', 'rgba(94,234,212,0.7)', 'rgba(96,165,250,0.75)', 'rgba(94,234,212,0.9)'],
+            borderRadius: 8,
+            maxBarThickness: 36
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 100,
+              ticks: { color: 'rgba(255,255,255,0.7)' },
+              grid: { color: 'rgba(255,255,255,0.08)' }
+            },
+            x: {
+              ticks: { color: 'rgba(255,255,255,0.7)' },
+              grid: { display: false }
+            }
+          }
+        }
+      });
+
+      const chatToggle = document.getElementById('chatToggle');
+      const chatPanel = document.getElementById('chatPanel');
+      const chatForm = document.getElementById('chatForm');
+      const chatBody = document.getElementById('chatBody');
+
+      chatToggle?.addEventListener('click', () => {
+        chatPanel.classList.toggle('active');
+      });
+
+      const addMessage = (text, role = 'bot') => {
+        const bubble = document.createElement('div');
+        bubble.className = `chat-float ${role}`;
+        bubble.textContent = text;
+        chatBody.appendChild(bubble);
+        chatBody.scrollTop = chatBody.scrollHeight;
+      };
+
+      const loadMessages = async () => {
+        try {
+          const response = await fetch('/api/messages');
+          if (!response.ok) return;
+          const data = await response.json();
+          if (!data.messages?.length) return;
+          chatBody.innerHTML = '';
+          data.messages.forEach((message) => {
+            addMessage(message.text, message.role);
+          });
+        } catch (error) {
+          console.error(error);
+        }
+      };
+
+      chatForm?.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const name = document.getElementById('chatName').value.trim();
+        const email = document.getElementById('chatEmail').value.trim();
+        const message = document.getElementById('chatMessage').value.trim();
+        if (!name || !email || !message) return;
+
+        addMessage(`Thanks ${name}, your message has been sent.`, 'user');
+        addMessage('I will receive your note by email and respond shortly.', 'bot');
+        chatForm.reset();
+
+        try {
+          await fetch('/api/messages', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, message })
+          });
+        } catch (error) {
+          console.error(error);
+        }
+      });
+
+      loadMessages();
+      setInterval(loadMessages, 5000);
+
+      const ctx = document.getElementById('competencyChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: [
+            'Enterprise Agile & SAFe',
+            'Program & Portfolio Management',
+            'AI/ML & GenAI Product Innovation',
+            'RPA Engineering',
+            'Risk Mitigation',
+            'People Leadership'
+          ],
+          datasets: [{
+            label: 'Executive Competency Index',
+            data: [98, 94, 92, 90, 93, 95],
+            backgroundColor: 'rgba(94, 234, 212, 0.2)',
+            borderColor: '#5eead4',
+            pointBackgroundColor: '#60a5fa',
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            r: {
+              suggestedMin: 0,
+              suggestedMax: 100,
+              ticks: { display: false },
+              grid: { color: 'rgba(255,255,255,0.08)' },
+              angleLines: { color: 'rgba(255,255,255,0.08)' }
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

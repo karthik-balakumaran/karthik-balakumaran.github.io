@@ -1,0 +1,20 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^gh auth status --show-token \\|\\| true; gh repo view KarthikBalakumaran/karthikbalakumaran\\.github\\.io --json name,defaultBranchRef,htmlUrl,visibility,owner,sshUrl,url \\|\\| true; gh api repos/KarthikBalakumaran/karthikbalakumaran\\.github\\.io/contents --jq '\\.\\[\\]\\.name' \\|\\| true; git remote -v \\|\\| true; git branch --show-current \\|\\| true; git rev-parse --abbrev-ref HEAD \\|\\| true; git status --porcelain \\|\\| true$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^unset GITHUB_TOKEN && gh auth login --web$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd /workspaces/karthik-portfolio && git remote -v$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd /workspaces/karthik-portfolio && git add -A && git commit -m \"Add portfolio site files\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
